@@ -4,6 +4,7 @@ var FormView = {
 
   initialize: function() {
     FormView.$form.on('submit', FormView.handleSubmit);
+
   },
 
   handleSubmit: function(event) {
@@ -13,6 +14,7 @@ var FormView = {
     Parse.create(Messages());
 
     console.log('click!');
+    App.fetch();
   },
 
   setStatus: function(active) {

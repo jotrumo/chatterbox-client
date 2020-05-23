@@ -1,12 +1,13 @@
 var MessageView = {
 
-  render: function()
+  render: function(data)
   {
 
-    var text = JSON.stringify(this.text);//<script>kajs;fj</script>
+    var text = data.text;//<script>kajs;fj</script>
 
-    var user = JSON.stringify(this.username);
-    // console.log(user)
+    var user = data.username;
+
+
     // var room = data.roomname;
     // console.log(room)
     // var time = data.createdAt;
