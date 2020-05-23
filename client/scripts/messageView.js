@@ -1,11 +1,11 @@
 var MessageView = {
 
-  render: function(data)
+  render: function()
   {
 
-    var text = data.text;//<script>kajs;fj</script>
+    var text = JSON.stringify(this.text);//<script>kajs;fj</script>
 
-    var user = data.username;
+    var user = JSON.stringify(this.username);
     // console.log(user)
     // var room = data.roomname;
     // console.log(room)
@@ -14,7 +14,7 @@ var MessageView = {
   return _.template(`
 
       <div class="chat">
-        <div class="username">${user}</div>
+        <div class="username">${user}:</div>
         <div class ="text">${text}</div>
       </div>
 

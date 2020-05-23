@@ -8,9 +8,10 @@ var Parse = {
       url: Parse.server,
       type: "POST",
       data: JSON.stringify(message),
-      contentType: 'application/json',
+      contentType: 'application' + '/' + 'json',
       success: successCB,
-      dataType: errorCB || function(error) {
+      dataType: 'json',
+      error: errorCB || function(error) {
         console.error('chatterbox: Failed to send message', error);
       }
     });
