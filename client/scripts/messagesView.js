@@ -4,7 +4,7 @@ var MessagesView = {
 
   initialize: function() {
     // MessagesView.$chats.on('submit', MessagesView.renderMessage);
-    MessagesView.renderMessage(data);
+    // MessagesView.renderMessage();
   },
 
   renderMessage: function(data) {
@@ -15,7 +15,7 @@ var MessagesView = {
     if(data.results) {
       for (let i = 0; i < data.results.length; i++) {
         //#chats append//from here we are going to call messege view and its going to return messages.
-        this.append(MessageView.render(data.results[i]));
+        MessagesView.$chats.append(MessageView.render(data.results[i]));
       }
     }
   }
